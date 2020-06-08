@@ -22,6 +22,10 @@ class App extends Component {
 
   fetchData() {
     window.cockpitSpawn(this.updateData, this.cockpitError);
+    /*let url = '/test.json';
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => this.updateData(JSON.stringify(data)));*/
   }
   updateData(data) {
     const jsonData = JSON.parse(data);

@@ -1,11 +1,18 @@
 import React from 'react';
 
 const PsuPanel = (props) => {
-  const localStatus = props.status.status === 'ok' ? 'ok' : 'no';
+  const status = props.status;
+  const displayStatus = status.status === 'ok' ? 'ok' : 'no';
   return (
     <div className="panel psu" style={props.style}>
-      <div className={`icon ${localStatus}`}></div>
-      <div className="text">{localStatus === 'ok' ? `${props.status.volt}V` : props.status.volt}</div>
+      <div className={`icon ${displayStatus}`}></div>
+      <div className="text">{displayStatus === 'ok' ? `${status.volt}V` : status.volt}</div>
+      <div className="panelTooltip">
+        <ul>
+          <li>PSU status: {status.status}</li>
+          <li>Volt: {status.volt}</li>
+        </ul>
+      </div>
     </div>
   );
 };

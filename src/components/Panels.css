@@ -1,0 +1,74 @@
+.panel {
+  position: absolute;
+  display: flex;
+}
+
+.panel .text {
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 11px;
+}
+.panel .icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border: 1px solid #999;
+}
+.panel.psu .icon.ok {
+  background-color: #00e000;
+}
+.panel.psu .icon.no {
+  background-color: #ff0000;
+}
+
+.panel.data .icon.ok {
+  background-color: #00e000;
+}
+.panel.data .icon.no {
+  background-color: #cccccc;
+}
+
+.error {
+  position: absolute;
+  top: 126px;
+  width: 100%;
+  background-color: #ff0000;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.panel .panelTooltip {
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  bottom: -6px;
+  left: -3px;
+}
+
+.panel .panelTooltip ul {
+  visibility: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 5px 10px;
+  white-space: nowrap;
+  background-color: rgb(50, 50, 50, 0.9);
+  color: #fff;
+  border-radius: 4px;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 25px;
+  left: 5px;
+}
+.panel .panelTooltip ul li {
+  margin: 4px 0;
+}
+
+.panel:hover .panelTooltip ul {
+  visibility: visible;
+}
