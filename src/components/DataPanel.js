@@ -1,4 +1,5 @@
 import React from 'react';
+import PanelToolTip from './PanelToolTip';
 
 const DataPanel = (props) => {
   const status = props.status;
@@ -7,12 +8,7 @@ const DataPanel = (props) => {
     <div className="panel data" style={props.style}>
       <div className={`icon ${displayStatus}`}></div>
       <div className="text">{props.name}</div>
-      <div className="panelTooltip">
-        <ul>
-          <li>Link status: {status.link_status}</li>
-          <li>Data rate: {status.bps}bps</li>
-        </ul>
-      </div>
+      <PanelToolTip status={status} />
     </div>
   );
 };
