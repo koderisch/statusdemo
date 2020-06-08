@@ -37,3 +37,38 @@
   font-weight: bold;
   padding: 5px 10px;
 }
+
+.panel .panelTooltip {
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  bottom: -6px;
+  left: -3px;
+}
+
+.panel .panelTooltip ul {
+  visibility: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 5px 10px;
+  white-space: nowrap;
+  background-color: rgb(50, 50, 50, 0.9);
+  color: #fff;
+  border-radius: 4px;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 25px;
+  left: 5px;
+}
+.panel .panelTooltip ul li {
+  margin: 4px 0;
+}
+
+.panel:hover .panelTooltip ul {
+  visibility: visible;
+}
