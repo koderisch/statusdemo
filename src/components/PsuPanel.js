@@ -1,4 +1,5 @@
 import React from 'react';
+import PanelToolTip from './PanelToolTip';
 
 const PsuPanel = (props) => {
   const status = props.status;
@@ -7,12 +8,7 @@ const PsuPanel = (props) => {
     <div className="panel psu" style={props.style}>
       <div className={`icon ${displayStatus}`}></div>
       <div className="text">{displayStatus === 'ok' ? `${status.volt}V` : status.volt}</div>
-      <div className="panelTooltip">
-        <ul>
-          <li>PSU status: {status.status}</li>
-          <li>Volt: {status.volt}</li>
-        </ul>
-      </div>
+      <PanelToolTip status={status} />
     </div>
   );
 };
