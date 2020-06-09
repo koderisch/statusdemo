@@ -1,0 +1,26 @@
+{
+  "psu1": {
+    "status": "no",
+    "volt": "Power Supply AC lost"
+  },
+  "psu2": {
+    "status": "ok",
+    "volt": "235"
+  },
+  "mgmt1": {
+    "link_status": "1000Mbit",
+    "bps": 7745
+  },
+  "mgmt2": {
+    "link_status": "1000Mbit",
+    "bps": 5284
+  },
+  "data1": {
+    "link_status": "100000Mbit",
+    "bps": 1035672
+  },
+  "data2": {
+    "link_status": "no link",
+    "bps": 0
+  }
+}
